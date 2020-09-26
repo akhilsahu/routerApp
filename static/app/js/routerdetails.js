@@ -90,6 +90,7 @@ var $crf_token = $('[name="csrfmiddlewaretoken"]').attr('value');
     }
 
     function handleFormError(jqXHR, textStatus, errorThrown){
+         alert(jqXHR.responseText)
         console.log(jqXHR)
         console.log(textStatus)
         console.log(errorThrown)

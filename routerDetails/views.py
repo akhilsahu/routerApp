@@ -1,5 +1,6 @@
 import random
 
+from django.db.models import Count, Sum
 from faker import Faker
 from faker.providers import internet
 
@@ -39,7 +40,9 @@ class RouterAuthListView(FormMixin, TemplateView):
 
 
 class RouterList(ListView):
-    queryset = RouterDetail.objects.order_by('-sap_id')
+    # queryset = RouterDetail.objects.order_by('-sap_id')
+    queryset = RouterDetail.objects.values('sap_id').annotate(Count('sap_id'))
+    print("==>", queryset)
     context_object_name = 'router_list'
     template_name = 'routerDetails/router_list.html'
 

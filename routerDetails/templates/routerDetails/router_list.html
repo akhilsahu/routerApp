@@ -4,7 +4,7 @@
 
 
 
-<h1>Router Details List</h1>
+<h1>SAPID WISE COUNT</h1>
 
             <div class="row">
                 <div class="col-md-6"> </div>
@@ -18,22 +18,23 @@
 <table   class="table table-striped   ">
   <thead>
     <tr>
-	<th   scope="col">  ID</th>
+
      <th   scope="col"> SAPID </th>
-	 <th   scope="col">Internet Host Name</th>
-	 <th  scope="col">LOOPBACK</th>
-	 <th  scope="col">MAC Address</th>
+	 <th   scope="col"> count</th>
+<!--	 <th  scope="col">LOOPBACK</th>-->
+<!--	 <th  scope="col">MAC Address</th>-->
 
        </tr>
    </thead>
     <tbody>
         {% for r in router_list %}
         <tr>
-            <td>{{ r.id }}</td>
+
+
             <td>{{ r.sap_id }}</td>
-            <td>{{ r.internet_host_names }}</td>
-             <td>{{ r.loopback }}</td>
-            <td>{{ r.mac_address }}</td>
+
+            <td>{{ r.sap_id__count }}</td>
+
         </tr>
         {% endfor %}
     </tbody>
