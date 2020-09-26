@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<hr>
+
+
+
+<h1>Router Details List</h1>
+
+
+        <form method="POST" >
+          <div class="form-group">
+            <label for="records">Enter number of records</label>
+            <input type="number" name="num" class="form-control" id="records" aria-describedby="recordsHelp" placeholder="Enter number of records">
+           </div>
+                {% csrf_token %}
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+
+
+{% endblock %}
